@@ -7,7 +7,6 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import dev.android.R
-import devx.insta.popsave.PopSave
 import devx.insta.popsave.PopSaveAnimUtils
 import devx.insta.popsave.PopSaveDrawee
 import kotlinx.android.synthetic.main.activity_main.*
@@ -23,15 +22,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        val imageUri1 = Uri.parse("https://raw.githubusercontent.com/facebook/fresco/master/docs/static/logo.png")
-//        mainImage1?.setImageURI(imageUri1)
+        val imageUri1 = Uri.parse("https://cdn1.coutloot.com/approval/thumb/324892_1566803758.jpeg")
+        mainImage1?.setImageURI(imageUri1)
 
         popSaveDrawee
-            .setPopperImage(R.drawable.bags)//For local image.  For Remote image Use: "popSave?.imageView" and handle I/O
+//            .setPopperImage(R.drawable.bags)//For local image.  For Remote image Use: "popSave?.imageView" and handle I/O
             .setPopperAreaSize(0, 500)
             .setPopperSize(130, 130)
             .shouldMoveUp()
-//            .loadImage("https://raw.githubusercontent.com/facebook/fresco/master/docs/static/logo.png")
+            .loadImage("https://cdn1.coutloot.com/approval/thumb/324892_1566803758.jpeg")
             .setOnFinishListener(object : PopSaveDrawee.OnFinish {
                 override fun onFinish() {
 
